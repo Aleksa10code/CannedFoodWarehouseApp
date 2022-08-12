@@ -51,7 +51,7 @@ public class Bin {
         return removed;
    }
 
-    public boolean removeExpired() {
+    public boolean removeExpiredBin() {
         boolean removed = cans.removeIf(can -> LocalDate.now().isAfter(can.getExpiry_date()));
         if (cans.isEmpty()) {
             type = "";
@@ -63,5 +63,4 @@ public class Bin {
     public String toString() {
         return type + " " + cans;
     }
-
 }

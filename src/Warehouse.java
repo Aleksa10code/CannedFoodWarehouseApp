@@ -64,12 +64,23 @@ public class Warehouse {
     public boolean removeExpired() {
         boolean removed = false;
         for (int i = 0; i < bins.length; i++) {
-            boolean removedInBin = bins[i].removeExpired();
+            boolean removedInBin = bins[i].removeExpiredBin();
             if (removedInBin) {
                 removed = true;
             }
         }
         return removed;
         //    Stream.of(bins).forEach(Bin::removeExpired);
+    }
+
+    public boolean removedExpired() {
+        boolean removed = false;
+        for (int i = 0; i < bins.length; i++) {
+            boolean removedInBin = bins[i].removeExpiredBin();
+            if (removedInBin) {
+                removed = true;
+            }
+        }
+        return removed;
     }
 }

@@ -18,12 +18,5 @@ public class WarehouseApp {
     warehouse.removeExpired();
 
     System.out.println(warehouse);
-
-
-
-
-
-
-
     }
 }
